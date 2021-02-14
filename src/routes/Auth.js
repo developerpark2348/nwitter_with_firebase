@@ -37,7 +37,7 @@ const Auth = () => {
   const toggleAccount = () => setNewAccount((prev) => !prev);
 
   const onSocialClick = async (event) => {
-      const {target: { name }, } = event;
+      const {target: { name}, } = event;
       let provider;
       if(name === "google"){
         provider = new firebaseInstance.auth.GoogleAuthProvider();
