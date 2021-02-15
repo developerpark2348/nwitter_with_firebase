@@ -33,20 +33,24 @@ const Nweet = ({ nweetObj, isOwner }) => {
             { 
             editing ?
                 <>
-                <form onSubmit={onSubmit}>
-                    <input 
-                    type="text" 
-                    placeholder="nweet을 편집하세요" 
-                    value={newNweet} 
-                    required
-                    onChange={onChange}
-                    />
-                    <input
-                    type="submit"
-                    value="업데이트 nweet"
-                    />
-                </form>
-                <button onClick={toggleEditing}>취소하기</button>
+                    {isOwner && (
+                        <>
+                            <form onSubmit={onSubmit}>
+                            <input 
+                            type="text" 
+                            placeholder="nweet을 편집하세요" 
+                            value={newNweet} 
+                            required
+                            onChange={onChange}
+                            />
+                            <input
+                            type="submit"
+                            value="업데이트 nweet"
+                            />
+                            </form>
+                            <button onClick={toggleEditing}>취소하기</button>
+                        </>
+                    )}
                 </>
             :
             <>
