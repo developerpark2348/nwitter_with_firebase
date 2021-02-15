@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { dbService } from "fbase";
 
 const Nweet = ({ nweetObj, isOwner }) => {
