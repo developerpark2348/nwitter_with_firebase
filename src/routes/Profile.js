@@ -2,7 +2,7 @@ import { authService } from "fbase";
 import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 
-const Profile = ({ userObj }) => {
+const Profile = ({ refreshUser, userObj }) => {
 
     const history = useHistory();
 
@@ -24,7 +24,8 @@ const Profile = ({ userObj }) => {
         if (userObj.displayName !== newDisplayName) {
             await userObj.updateProfile({
                 displayName: newDisplayName,
-            })
+            });
+            refreshUser();
         }
     }
 

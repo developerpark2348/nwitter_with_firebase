@@ -14,6 +14,7 @@ const Nweet = ({ nweetObj, isOwner }) => {
             await storageService.refFromURL(nweetObj.attachmentUrl).delete();
         }
     };
+
     const toggleEditing = () => setEditing((prev) => !prev);
 
     const onSubmit = async (event) => {
@@ -22,12 +23,12 @@ const Nweet = ({ nweetObj, isOwner }) => {
             text:newNweet,
         })
         setEditing(false);
-    }
+    };
 
     const onChange = (event) => {
         const {target: { value }, } = event;
         setNewNweet(value);
-    }
+    };
 
     return(
         <div>
