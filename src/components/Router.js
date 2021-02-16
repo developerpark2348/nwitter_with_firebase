@@ -9,7 +9,7 @@ const AppRouter =  ({ isLoggedIn, userObj}) => {
 
     return (
         <Router>
-            {isLoggedIn && <Navigation />}
+            {isLoggedIn && <Navigation userObj={userObj}/>}
             <Switch>
                 {isLoggedIn 
                 ?
@@ -18,7 +18,7 @@ const AppRouter =  ({ isLoggedIn, userObj}) => {
                         <Home userObj={userObj} />
                     </Route>
                     <Route exact path="/profile">
-                        <Profile />
+                        <Profile userObj={userObj} />
                     </Route>
                 </> 
                 :
