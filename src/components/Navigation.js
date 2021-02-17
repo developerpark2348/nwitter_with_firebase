@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = ({userObj}) =>
+const Navigation = ({userObj}) => {
+
+    return(
 
     <nav>
         <ul style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
@@ -28,11 +30,14 @@ const Navigation = ({userObj}) =>
                 <span style={{ marginTop: 10 }}>
                     {userObj.displayName
                         ? `${userObj.displayName}의 Profile`
-                        : "Profile"}
+                        : "Profile"
+                    }
                 </span>
                 </Link>
             </li>
         </ul>
     </nav>
+    )
+}
 
 export default Navigation
