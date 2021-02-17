@@ -1,7 +1,5 @@
 import React, {useState} from "react";
-import { authService } from "../fbase";
-
-const inputStyles = {};
+import { authService } from "fbase";
 
 const AuthForm = () => {
 
